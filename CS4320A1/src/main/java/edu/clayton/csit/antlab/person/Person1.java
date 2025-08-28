@@ -29,10 +29,18 @@ public class Person1 {
 	 * @param input the string to be modified
 	 * @return the modified string
 	 */
-	private String calc(String input) {
-	  //Person 1 put your implementation here
-	  return null;
-	}
+
+    private String calc(String input) {
+      if (input == null || input.length() < 2) {
+        return input;
+      }
+      StringBuilder result = new StringBuilder();
+      for (int i = 2; i < input.length(); i++) {
+        result.append(input.charAt(i));
+      }
+      result.append(input.substring(0, 2));
+      return result.toString();
+    }
 	
 	/**
 	 * Return a string rep of this object
