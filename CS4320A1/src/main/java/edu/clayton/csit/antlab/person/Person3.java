@@ -9,7 +9,7 @@ package edu.clayton.csit.antlab.person;;
  */
 public class Person3 {
    /** Holds the persons real name */  
-	private String name;
+	private String name = "Bryson Hinson";
 	
 	/**
 	 * The constructor, takes in the persons
@@ -43,6 +43,6 @@ public class Person3 {
 	 */
 	private String calc(String input) {
 	  //Person 3 put your implementation here
-	  return null;
+	  return new StringBuilder(input).reverse().toString();
 	}
 }
