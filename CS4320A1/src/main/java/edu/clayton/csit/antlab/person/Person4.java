@@ -19,20 +19,32 @@ public class Person4 {
   public Person4(String pname) {
     name = pname;
   }
-    /**
-     * This method should return a string
-     * where each character is 1 greater 
-     * than its previous value.  So
-     * given "abc123" it should return
-     * "bcd234".
-     *
-     * @param input the string to be modified
-     * @return the modified string
-     */
-    private String calc(String input) {
-      //Person 4 put your implementation here
-      return null;
+  
+/**
+ * This method should return a string
+ * where each character is 1 greater 
+ * than its previous value.  So
+ * given "abc123" it should return
+ * "bcd234".
+ *
+ * @param input the string to be modified
+ * @return the modified string
+ */
+private String calc(String input) {
+    if (input == null) {
+        return null; // handle null input safely
     }
+
+    StringBuilder result = new StringBuilder();
+
+    for (int i = 0; i < input.length(); i++) {
+        char c = input.charAt(i);
+        // increment the character
+        result.append((char)(c + 1));
+    }
+
+    return result.toString();
+}
     
     /**
      * Return a string rep of this object
